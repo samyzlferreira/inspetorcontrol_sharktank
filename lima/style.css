@@ -1,0 +1,111 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f7f2ed;
+    color: #333;
+}
+header{
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5ddd7 ;
+}
+header h1 {
+    color: #d87945;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+nav a:hover {
+    color: #d87945;
+}
+section {
+    padding: 50px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+.card a{
+    background-color: #d87945;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+form{
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+label {
+    display: block;
+    margin-top: 15px;
+
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+textarea {
+    height: 80px;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #d97745;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+#setores{
+    display: none;
+}
+#inspetoria{
+    display: none;
+}
+#coordenacao{
+    display: none;
+}
+#secretaria{
+    display: none;
+}
+#cozinha{
+    display: none;
+}

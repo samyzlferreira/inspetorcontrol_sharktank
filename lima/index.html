@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspetorControl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header> 
+    <h1>InspetorControl</h1>
+    <nav>
+        <ul> 
+            <li><a href=#inicio>Inicio</a></li>
+        </ul>
+    </nav>
+   </header>
+    <section id="inicio">
+        <div class="container">
+            <h2>Bem vindo(a) ao Inspetor Control!</h2>
+            <p>Faça seu login para entrar no nosso sistema.</p>
+            <form>
+                <label>Email:</label>
+                <input type="email">
+
+                <label>Senha:</label>
+                <input type="password">
+
+                <button type="button" id="entrar">Entrar</button>
+            </form>
+        </div>
+    </section>
+    <section id="setores">
+        <div class="container">
+            <h2>Escolha seu setor</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Inspetoria</h3>
+                    <button type="button" onclick="mostrarsetor('inspetoria')">Entrar</button>
+                     </div>
+                     <div class="card">
+                        <h3>Coordenação</h3>
+                        <button type="button" onclick="mostrarsetor('coordenacao')">Entrar</button>
+                     </div>
+                     <div class="card">
+                        <h3>Secretaria</h3>
+                        <button type="button" onclick="mostrarsetor('secretaria')">Entrar</button>
+                     </div>
+                      <div class="card">
+                        <h3>Cozinha</h3>
+                        <button type="button" onclick="mostrarsetor('cozinha')">Entrar</button>
+                     </div>
+                    <section id="inspetoria">
+                        <div class="container">
+                            <h2>Inspetoria</h2>
+                            <div class="card">
+                             <h3>Faltas</h3>
+                            <p>Registrar faltas dos alunos</p>
+                            <a href="#falta">Acessar</a
+                <div class="card">
+                    <h3>Entrada atrasada</h3>
+                    <p>Registrar entrada atrasada</p>
+                    <a href="#entrada">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Medicamentos</h3>
+                    <p>registrar medicamentos</p>
+                    <a href="#medicamentos">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Ocorrências</h3>
+                    <p>Registrar ocorrências</p>
+                    <a href="#ocorrencia">Acessar</a>
+                </div>
+            </div>
+    </section>
+
+ <section id="falta">
+    <div class="container">
+        <h2>Registrar falta</h2>
+        <form>
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Turma:</label>
+            <input type="text">
+            <label>Data:</label>
+            <input type="date">
+            <button>Enviar</button>
+        </form>
+    </div>
+ </section>
+
+ <section id="entrada">
+    <div class="container">
+        <h2>Entrada atrasada</h2>
+        <form>
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Turma:</label>
+            <input type="text">
+            <label>Horário:</label>
+            <input type="time">
+            <button>Enviar</button>
+        </form>
+    </div>
+ </section>
+
+ <section id="saida">
+    <div class="container">
+        <h2>Saida antecipada</h2>
+        <form>
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Turma</label>
+            <input type="text">
+            <label>Responsável:</label>
+            <input type="text">
+            <button>Enviar</button>
+
+        </form>
+    </div>
+ </section>
+ <section id="medicamento">
+    <div class="container">
+        <h2>Medicamentos</h2>
+        <form>
+            <label>Medicamento:</label>
+            <input type="text">
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Horário:</label>
+            <input type="time">
+            <button>Enviar</button>
+        </form>
+    </div>
+ </section>
+ <section id="ocorrencia">
+    <div class="container">
+        <h2>Ocorrência</h2>
+        <form>
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Turma:</label>
+            <input type="text">
+            <label>Descrição:</label>
+            <textarea></textarea>
+            <button>Enviar</button>
+        </form>
+    </div>
+ </section>
+ <section id="coordenacao">
+    <div class="container">
+        <h2>Coordenção</h2>
+       <div class="cards">
+        <div class="card">
+            <h3>Frequência</h3>
+            <p>Consultar frequência dos alunos.</p>
+        </div>
+<div class="card">
+    <h3>Relatórios</h3>
+    <p>Consultar relatórios.</p>
+</div>
+<div class="card">
+    <h3>Turmas</h3>
+    <p>Consultar turmas</p>
+</div>
+
+       </div>
+    </div>
+ </section>
+ <section id="secretaria">
+    <div class="container">
+        <h2>Secretaria</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Alunos</h3>
+                <p>Ver alunos</p>
+            </div>
+            <div class="card">
+                <h3>Documentos</h3>
+                <p>Acessar documentos</p>
+            </div>
+            <div class="card">
+                <h3>Atestados</h3>
+                <p>Registrar atestados</p>
+            </div>
+        </div>
+    </div>
+ </section>
+ <section id="cozinha">
+    <div class="container">
+        <h2>Cozinha</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Cardápio</h3>
+                <p>Consultar cardápio</p>
+            </div>
+            <div class="card">
+                <h3>Qntd. de alunos</h3>
+                <p>consultar alunos presentes.</p>
+            </div>
+
+        </div>
+    </div>
+ </section>
+
+ <footer>
+    <p>InspetorControl - 2026</p>
+ </footer>
+ <script src="script.js"></script>
+
+</body>
+</html>
