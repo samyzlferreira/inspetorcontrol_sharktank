@@ -8,9 +8,9 @@
 - Isabelle Vizeu - BCD
 - Giulia Silveira - DER
 
-## Início das sprints
-
-- BCD (Iniciar Banco de Dados do projeto)
-- PBE1 (Desenvolver backend do projeto)
-- DER (Realizar DER do projeto)
-- LIMA (Iniciar site do projeto)
+## Início das Sprints
+### 1ª Sprint
+- BCD - (Iniciar Banco de Dados do projeto)
+- PBE1 - (Desenvolver backend do projeto)
+- DER - (Realizar DER do projeto)
+- LIMA - (Iniciar site do projeto)
