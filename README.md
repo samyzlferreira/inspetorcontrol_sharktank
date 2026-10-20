@@ -2,11 +2,11 @@
  
 ## Integrantes do Grupo
 
-- Samyra Ferreira - LIMA
-- Renan Fazullo - PBE1
-- Geovanna Martins - BCD
-- Isabelle Vizeu - BCD
-- Giulia Silveira - DER
+- Geovanna Martins Bertuol - BCD
+- Giulia de Godoi Silveira - DER
+- Isabelle Caroline Vizeu de Salles - BCD
+- Renan Pavan Fazullo - PBE1
+- Samyra Leite da Silva Ferreira - LIMA
 
 ## Início das Sprints
 ### 1ª Sprint
