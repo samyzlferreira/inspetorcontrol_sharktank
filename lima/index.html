@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,207 +7,331 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header> 
-    <h1>InspetorControl</h1>
-    <nav>
-        <ul> 
-            <li><a href=#inicio>Inicio</a></li>
-        </ul>
-    </nav>
-   </header>
+    <header>
+        <h1>InspetorControl</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+            </ul>
+        </nav>
+    </header>
     <section id="inicio">
         <div class="container">
-            <h2>Bem vindo(a) ao Inspetor Control!</h2>
+            <h2>Bem-vindo(a) ao InspetorControl!</h2>
             <p>Faça seu login para entrar no nosso sistema.</p>
             <form>
                 <label>Email:</label>
-                <input type="email">
-
+                <input type="email" id="email">
                 <label>Senha:</label>
-                <input type="password">
-
+                <input type="password" id="senha">
                 <button type="button" id="entrar">Entrar</button>
             </form>
         </div>
     </section>
-    <section id="setores">
+    <section id="setores" style="display: none;">
         <div class="container">
             <h2>Escolha seu setor</h2>
             <div class="cards">
                 <div class="card">
                     <h3>Inspetoria</h3>
                     <button type="button" onclick="mostrarsetor('inspetoria')">Entrar</button>
-                     </div>
-                     <div class="card">
-                        <h3>Coordenação</h3>
-                        <button type="button" onclick="mostrarsetor('coordenacao')">Entrar</button>
-                     </div>
-                     <div class="card">
-                        <h3>Secretaria</h3>
-                        <button type="button" onclick="mostrarsetor('secretaria')">Entrar</button>
-                     </div>
-                      <div class="card">
-                        <h3>Cozinha</h3>
-                        <button type="button" onclick="mostrarsetor('cozinha')">Entrar</button>
-                     </div>
-                    <section id="inspetoria">
-                        <div class="container">
-                            <h2>Inspetoria</h2>
-                            <div class="card">
-                             <h3>Faltas</h3>
-                            <p>Registrar faltas dos alunos</p>
-                            <a href="#falta">Acessar</a
+                </div>
+                <div class="card">
+                    <h3>Coordenação</h3>
+                    <button type="button" onclick="mostrarsetor('coordenacao')">Entrar</button>
+                </div>
+                <div class="card">
+                    <h3>Secretaria</h3>
+                    <button type="button" onclick="mostrarsetor('secretaria')">Entrar</button>
+                </div>
+                <div class="card">
+                    <h3>Cozinha</h3>
+                    <button type="button" onclick="mostrarsetor('cozinha')">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="inspetoria" style="display: none;">
+        <div class="container">
+            <h2>Inspetoria</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <div class="cards">
+                <div class="card">
+                    <h3>Faltas</h3>
+                    <p>Registrar faltas dos alunos.</p>
+                    <a href="#falta">Acessar</a>
+                </div>
                 <div class="card">
                     <h3>Entrada atrasada</h3>
-                    <p>Registrar entrada atrasada</p>
+                    <p>Registrar entrada atrasada.</p>
                     <a href="#entrada">Acessar</a>
                 </div>
                 <div class="card">
+                    <h3>Saída antecipada</h3>
+                    <p>Registrar saída antecipada.</p>
+                    <a href="#saida">Acessar</a>
+                </div>
+                <div class="card">
                     <h3>Medicamentos</h3>
-                    <p>registrar medicamentos</p>
-                    <a href="#medicamentos">Acessar</a>
+                    <p>Registrar medicamentos.</p>
+                    <a href="#medicamento">Acessar</a>
                 </div>
                 <div class="card">
                     <h3>Ocorrências</h3>
-                    <p>Registrar ocorrências</p>
+                    <p>Registrar ocorrências.</p>
                     <a href="#ocorrencia">Acessar</a>
                 </div>
             </div>
+        </div>
     </section>
-
- <section id="falta">
-    <div class="container">
-        <h2>Registrar falta</h2>
-        <form>
+    <section id="falta" style="display: none;">
+        <div class="container">
+            <h2>Registrar falta</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <label>Data:</label>
+                <input type="date">
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="entrada" style="display: none;">
+        <div class="container">
+            <h2>Entrada atrasada</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <label>Horário:</label>
+                <input type="time">
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="saida" style="display: none;">
+        <div class="container">
+            <h2>Saída antecipada</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <label>Responsável:</label>
+                <input type="text">
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="medicamento" style="display: none;">
+        <div class="container">
+            <h2>Medicamentos</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Medicamento:</label>
+                <input type="text">
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Horário:</label>
+                <input type="time">
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="ocorrencia" style="display: none;">
+        <div class="container">
+            <h2>Ocorrência</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <label>Descrição:</label>
+                <textarea></textarea>
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="coordenacao" style="display: none;">
+        <div class="container">
+            <h2>Coordenação</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <div class="cards">
+                <div class="card">
+                    <h3>Frequência</h3>
+                    <p>Consultar frequência dos alunos.</p>
+                    <a href="#frequencia">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Relatórios</h3>
+                    <p>Consultar relatórios.</p>
+                    <a href="#relatorios">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Turmas</h3>
+                    <p>Consultar turmas.</p>
+                    <a href="#turmas">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frequencia" style="display: none;">
+        <div class="container">
+            <h2>Frequência dos alunos</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <button type="button">Consultar</button>
+            </form>
+        </div>
+    </section>
+    <section id="relatorios" style="display: none;">
+        <div class="container">
+            <h2>Relatórios</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <p>Consulte os relatórios da escola.</p>
+            <label>Tipo de relatório:</label>
+            <select>
+                <option>Frequência</option>
+                <option>Ocorrências</option>
+                <option>Entradas atrasadas</option>
+            </select>
+            <button type="button">Consultar</button>
+        </div>
+    </section>
+    <section id="turmas" style="display: none;">
+        <div class="container">
+            <h2>Turmas</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <p>Consultar informações das turmas.</p>
+            <label>Nome da turma:</label>
+            <input type="text">
+            <button type="button">Consultar</button>
+        </div>
+    </section>
+    <section id="secretaria" style="display: none;">
+        <div class="container">
+            <h2>Secretaria</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <div class="cards">
+                <div class="card">
+                    <h3>Alunos</h3>
+                    <p>Ver alunos.</p>
+                    <a href="#alunos">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Documentos</h3>
+                    <p>Acessar documentos.</p>
+                    <a href="#documentos">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Atestados</h3>
+                    <p>Registrar atestados.</p>
+                    <a href="#atestados">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="alunos" style="display: none;">
+        <div class="container">
+            <h2>Alunos</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <p>Consultar informações dos alunos.</p>
             <label>Nome do aluno:</label>
             <input type="text">
             <label>Turma:</label>
             <input type="text">
-            <label>Data:</label>
-            <input type="date">
-            <button>Enviar</button>
-        </form>
-    </div>
- </section>
-
- <section id="entrada">
-    <div class="container">
-        <h2>Entrada atrasada</h2>
-        <form>
-            <label>Nome do aluno:</label>
-            <input type="text">
-            <label>Turma:</label>
-            <input type="text">
-            <label>Horário:</label>
-            <input type="time">
-            <button>Enviar</button>
-        </form>
-    </div>
- </section>
-
- <section id="saida">
-    <div class="container">
-        <h2>Saida antecipada</h2>
-        <form>
-            <label>Nome do aluno:</label>
-            <input type="text">
-            <label>Turma</label>
-            <input type="text">
-            <label>Responsável:</label>
-            <input type="text">
-            <button>Enviar</button>
-
-        </form>
-    </div>
- </section>
- <section id="medicamento">
-    <div class="container">
-        <h2>Medicamentos</h2>
-        <form>
-            <label>Medicamento:</label>
-            <input type="text">
-            <label>Nome do aluno:</label>
-            <input type="text">
-            <label>Horário:</label>
-            <input type="time">
-            <button>Enviar</button>
-        </form>
-    </div>
- </section>
- <section id="ocorrencia">
-    <div class="container">
-        <h2>Ocorrência</h2>
-        <form>
-            <label>Nome do aluno:</label>
-            <input type="text">
-            <label>Turma:</label>
-            <input type="text">
-            <label>Descrição:</label>
-            <textarea></textarea>
-            <button>Enviar</button>
-        </form>
-    </div>
- </section>
- <section id="coordenacao">
-    <div class="container">
-        <h2>Coordenção</h2>
-       <div class="cards">
-        <div class="card">
-            <h3>Frequência</h3>
-            <p>Consultar frequência dos alunos.</p>
+            <button type="button">Consultar</button>
         </div>
-<div class="card">
-    <h3>Relatórios</h3>
-    <p>Consultar relatórios.</p>
-</div>
-<div class="card">
-    <h3>Turmas</h3>
-    <p>Consultar turmas</p>
-</div>
-
-       </div>
-    </div>
- </section>
- <section id="secretaria">
-    <div class="container">
-        <h2>Secretaria</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Alunos</h3>
-                <p>Ver alunos</p>
-            </div>
-            <div class="card">
-                <h3>Documentos</h3>
-                <p>Acessar documentos</p>
-            </div>
-            <div class="card">
-                <h3>Atestados</h3>
-                <p>Registrar atestados</p>
+    </section>
+    <section id="documentos" style="display: none;">
+        <div class="container">
+            <h2>Documentos</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <p>Consultar documentos dos alunos.</p>
+            <label>Nome do aluno:</label>
+            <input type="text">
+            <label>Tipo de documento:</label>
+            <select>
+                <option>Histórico escolar</option>
+                <option>Declaração de matrícula</option>
+                <option>Boletim</option>
+            </select>
+            <button type="button">Consultar</button>
+        </div>
+    </section>
+    <section id="atestados" style="display: none;">
+        <div class="container">
+            <h2>Atestados</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Nome do aluno:</label>
+                <input type="text">
+                <label>Turma:</label>
+                <input type="text">
+                <label>Data do atestado:</label>
+                <input type="date">
+                <label>Descrição:</label>
+                <textarea></textarea>
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="cozinha" style="display: none;">
+        <div class="container">
+            <h2>Cozinha</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <div class="cards">
+                <div class="card">
+                    <h3>Cardápio</h3>
+                    <p>Consultar cardápio.</p>
+                    <a href="#cardapio">Acessar</a>
+                </div>
+                <div class="card">
+                    <h3>Quantidade de alunos</h3>
+                    <p>Consultar alunos presentes.</p>
+                    <a href="#quantidade">Acessar</a>
+                </div>
             </div>
         </div>
-    </div>
- </section>
- <section id="cozinha">
-    <div class="container">
-        <h2>Cozinha</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Cardápio</h3>
-                <p>Consultar cardápio</p>
-            </div>
-            <div class="card">
-                <h3>Qntd. de alunos</h3>
-                <p>consultar alunos presentes.</p>
-            </div>
-
+    </section>
+    <section id="cardapio" style="display: none;">
+        <div class="container">
+            <h2>Cardápio</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <form>
+                <label>Dia:</label>
+                <input type="text" id="dia">
+                <label>Refeição:</label>
+                <input type="text" id="refeicao">
+                <button type="button" onclick="adicionarcardapio()">Adicionar</button>
+            </form>
+            <div id="listacardapio"></div>
         </div>
-    </div>
- </section>
-
- <footer>
-    <p>InspetorControl - 2026</p>
- </footer>
- <script src="script.js"></script>
-
+    </section>
+    <section id="quantidade" style="display: none;">
+        <div class="container">
+            <h2>Quantidade de alunos</h2>
+            <button type="button" onclick="voltar()">Voltar aos setores</button>
+            <label>Quantidade de alunos presentes:</label>
+            <input type="number" id="quantidadealunos">
+            <button type="button" onclick="atualizaralunos()">Salvar</button>
+            <p>Total de alunos: <span id="totalalunos">0</span></p>
+        </div>
+    </section>
+    <footer>
+        <p>InspetorControl - 2026</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
